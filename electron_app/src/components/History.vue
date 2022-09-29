@@ -2,7 +2,7 @@
     <div  class="animatable_content_box ">
     
         <div v-if="Object.values(app_state.history).length > 0">
-            <div v-for="history_box in Object.values(app_state.history)" :key="history_box.key" style="clear: both;">
+            <div v-for="history_box in Object.values(app_state.history).reverse()" :key="history_box.key" style="clear: both;">
             
                 <div @click="delete_hist(history_box.key)" style="float:right; margin-top: 10px;"  class="l_button">Delete</div>
                 <p class="history_box_info">
